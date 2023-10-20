@@ -10,3 +10,5 @@ C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\D
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\refint\CommissionManager.Data.dll
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.pdb
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\ref\CommissionManager.Data.dll
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\bin\Debug\net7.0\CommissionManager.Data.runtimeconfig.json
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.genruntimeconfig.cache

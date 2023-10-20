@@ -7,6 +7,7 @@ namespace CommissionManager.API
     public class Startup
     {
         private IConfiguration Configuration { get; }
+        
 
         public Startup(IConfiguration configuration)
         {
@@ -20,7 +21,7 @@ namespace CommissionManager.API
 
             services.AddScoped<ICommissionRepository, CommissionRepository>();
             services.AddScoped<IArtistRepository, ArtistRepository>();
-
+            services.AddDbContext<AppDbContext>(options => options.UseSqlite());
 
         }
 

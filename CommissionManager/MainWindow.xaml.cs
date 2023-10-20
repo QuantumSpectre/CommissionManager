@@ -18,11 +18,23 @@ namespace CommissionManager
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    
+
     public partial class MainWindow : Window
     {
+        public Frame MainFrame { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+
+            MainFrame = _MainFrame;
+
+            _MainFrame.Navigate(new DashboardPage());
+
         }
+
+        
     }
 }

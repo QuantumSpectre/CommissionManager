@@ -8,7 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommissionManager.UI\CommissionManager.UI.csproj" />
+    <Page Remove="Styles.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
   </ItemGroup>
 
 </Project>

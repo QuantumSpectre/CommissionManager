@@ -7,27 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "CommissionManager/1.0.0": {
-        "dependencies": {
-          "CommissionManager.UI": "1.0.0"
-        },
         "runtime": {
           "CommissionManager.dll": {}
-        }
-      },
-      "CommissionManager.UI/1.0.0": {
-        "runtime": {
-          "CommissionManager.UI.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CommissionManager/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "CommissionManager.UI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\App.xaml
-11407045341
+3282654275
 
-3-1233169557
-1991864286640
-MainWindow.xaml;
+577074103
+198-200740077
+MainWindow.xaml;Pages\DashboardPage.xaml;Pages\SettingsPage.xaml;
 
 False
 
