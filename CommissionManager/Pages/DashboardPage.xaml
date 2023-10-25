@@ -6,52 +6,28 @@
              xmlns:local="clr-namespace:CommissionManager"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <!--Style Reference-->
-
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/CommissionManager;component/Styles.xaml"/>
-
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>
 
     <Grid>
         <!-- Main Content -->
         <Grid Background="#272932">
             <!-- Page Content Goes Here -->
 
+            <Label HorizontalAlignment="Center"
+                   VerticalAlignment="Center" Background="Transparent"
+                   BorderThickness="1" BorderBrush="#37ebf3"
+                   Padding="10" FontSize="20" >
 
-            
-        </Grid>
-
-        <!-- Sidebar -->
-        <Grid Width="130" Background="#FDF500"
-                HorizontalAlignment="Left"
+                <Button Content="Dashboard Placeholder"
+                        Background="Transparent"
+                        BorderThickness ="0"
+                        Foreground="#37ebf3">
+                    
+                </Button>
                 
-                >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-
-            <StackPanel Height="Auto">
-                <Button Content="Dashboard" Margin="10" Style="{StaticResource CyberpunkButton }" />
-                <Button Content="Calendar" Margin="10" Style="{StaticResource CyberpunkButton }" />
-                <Button Content="Queue" Margin="10" Style="{StaticResource CyberpunkButton }"/>
-                <Button Content="Clients" Margin="10" Style="{StaticResource CyberpunkButton }" />
-            </StackPanel>
-
-            <Grid Grid.Row="2" VerticalAlignment="Bottom" Height="auto">
-                <Button VerticalAlignment="Bottom" Content="Settings" Margin="10" Style="{StaticResource CyberpunkButton }" 
-                        Click="ShowSettingsPage"/>
-            </Grid>
-
-
-
-
+            </Label>
 
         </Grid>
+
+        
     </Grid>
 </UserControl>

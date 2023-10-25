@@ -10,9 +10,9 @@ namespace CommissionManager.Data
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Artist> Artists { get; set; }
-        public DbSet<Commission> Commissions { get; set; }
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<ArtistEntity> Artists { get; set; }
+        public DbSet<CommissionEntity> Commissions { get; set; }
+        public DbSet<CustomerEntity> Customers { get; set; }
 
 
         //Add option save Database to a custom location such as Onedrive for backup.
@@ -23,7 +23,7 @@ namespace CommissionManager.Data
         {
             var folder = "\"C:\\Users\\charl\\OneDrive\\ArtistDatabase\"";
             
-            DbPath = System.IO.Path.Join(folder, ".db");
+            DbPath = System.IO.Path.Join(folder, "Artist.db");
         }
 
         

@@ -6,17 +6,7 @@
              xmlns:local="clr-namespace:CommissionManager"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
-    <UserControl.Resources>
-        
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/CommissionManager;component/Styles.xaml"/>
-
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-
-    </UserControl.Resources>
+   
 
 
     <Grid>
@@ -24,30 +14,19 @@
         <Grid Background="#272932">
             <!-- Page Content Goes Here -->
 
+            <Label HorizontalAlignment="Center"
+             VerticalAlignment="Center" Background="Transparent"
+             BorderThickness="1" BorderBrush="#37ebf3"
+             Padding="10" FontSize="20" >
 
+                <Button Content="Settings Placeholder"
+                  Background="Transparent"
+                  BorderThickness ="0"
+                  Foreground="#37ebf3">
 
-        </Grid>
+                </Button>
 
-        <!-- Sidebar -->
-        <Grid Width="130" Background="#FDF500"
-                 HorizontalAlignment="Left"
-                 
-                 >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="1*"/>
-            </Grid.RowDefinitions>
-
-            <StackPanel Height="Auto">
-                <Button Content="PlaceHolder" Margin="10" Style="{StaticResource CyberpunkButton }" />
-                <Button Content="PlaceHolder" Margin="10" Style="{StaticResource CyberpunkButton }" />
-                <Button Content="PlaceHolder" Margin="10" Style="{StaticResource CyberpunkButton }"/>
-                <Button Content="PlaceHolder" Margin="10" Style="{StaticResource CyberpunkButton }" />
-            </StackPanel>
-
-            <Grid Grid.Row="2" VerticalAlignment="Bottom" Height="auto">
-                <Button VerticalAlignment="Bottom" Content="Return" Margin="10" Style="{StaticResource CyberpunkButton }" Click="ReturnToDashboard"/>
-            </Grid>
+            </Label>
 
         </Grid>
     </Grid>
