@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager.BusinessLogic\\CommissionManager.BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager.BusinessLogic\\CommissionManager.BusinessLogic.csproj",
       "projectName": "CommissionManager.BusinessLogic",
-      "projectPath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager.BusinessLogic\\CommissionManager.BusinessLogic.csproj",
+      "projectPath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager.BusinessLogic\\CommissionManager.BusinessLogic.csproj",
       "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager.BusinessLogic\\obj\\",
+      "outputPath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager.BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

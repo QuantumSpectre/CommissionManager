@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\
 CommissionManager
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\App.xaml
-4-1829611618
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\App.xaml
+4-739547106
 
-81344334237
+15-474028581
 198-200740077
-MainWindow.xaml;Pages\DashboardPage.xaml;Pages\SettingsPage.xaml;UserControls\Sidebar.xaml;
+MainWindow.xaml;UserControls\Sidebar.xaml;Views\DashboardPage.xaml;Views\SettingsPage.xaml;
 
-True
+False
 

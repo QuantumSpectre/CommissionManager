@@ -12,3 +12,17 @@ C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\D
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.pdb
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.genruntimeconfig.cache
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\ref\CommissionManager.Data.dll
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\bin\Debug\net7.0\CommissionManager.Data.deps.json
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\bin\Debug\net7.0\CommissionManager.Data.runtimeconfig.json
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\bin\Debug\net7.0\CommissionManager.Data.dll
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\bin\Debug\net7.0\CommissionManager.Data.pdb
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.csproj.AssemblyReference.cache
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.AssemblyInfoInputs.cache
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.AssemblyInfo.cs
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.csproj.CoreCompileInputs.cache
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.dll
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\refint\CommissionManager.Data.dll
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.pdb
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\CommissionManager.Data.genruntimeconfig.cache
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.Data\obj\Debug\net7.0\ref\CommissionManager.Data.dll

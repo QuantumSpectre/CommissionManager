@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xCDofH8SrrjtQbxXodsZhn01YUEkCKJMSQu5xk5bz7Pj3uBRvMRYr1infbDM6WfBfFJ60JpKYkrUUGqemkTFIw==",
+  "dgSpecHash": "qyRgH204lVkDifR+VuL3kYxJWLzDmdFeZxqWqmwBu3CIrXLdTUWcthvoxclhppU275DiINHYv+8l9HTQcAKEFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager.Data\\CommissionManager.Data.csproj",
+  "projectFilePath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager.Data\\CommissionManager.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\charl\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\charl\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

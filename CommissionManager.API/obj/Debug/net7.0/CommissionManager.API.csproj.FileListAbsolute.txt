@@ -97,3 +97,10 @@ C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.API\obj\De
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.pdb
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.genruntimeconfig.cache
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager.API\obj\Debug\net7.0\ref\CommissionManager.API.dll
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.csproj.AssemblyReference.cache
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.AssemblyInfoInputs.cache
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.AssemblyInfo.cs
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.csproj.CoreCompileInputs.cache
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager.API\obj\Debug\net7.0\CommissionManager.API.MvcApplicationPartsAssemblyInfo.cache

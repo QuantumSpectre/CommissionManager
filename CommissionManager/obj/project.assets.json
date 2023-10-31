@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager.csproj",
+      "projectUniqueName": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager\\CommissionManager.csproj",
       "projectName": "CommissionManager",
-      "projectPath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager.csproj",
+      "projectPath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager\\CommissionManager.csproj",
       "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\obj\\",
+      "outputPath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

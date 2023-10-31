@@ -7,21 +7,9 @@
              xmlns:local="clr-namespace:CommissionManager"
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <UserControl.Resources>
-
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/CommissionManager;component/Styles.xaml"/>
-
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-
-    </UserControl.Resources>
-
-
-
+    
     <!-- Sidebar -->
-    <Grid Width="130" Background="#FDF500"
+    <Grid Width="130" Background="#f2f2f2"
                  HorizontalAlignment="Left"
                  >
         
@@ -33,16 +21,16 @@
 
         <StackPanel Height="Auto">
             
-            <Button Content="Dashboard" Margin="10" Style="{StaticResource CyberpunkButton }" 
+            <Button Content="Dashboard" Margin="10" Style="{StaticResource ThemeButton }" 
                     Click="ShowDashboardPage"/>
-            <Button Content="Commissions" Margin="10" Style="{StaticResource CyberpunkButton }"/>
-            <Button Content="Queue" Margin="10" Style="{StaticResource CyberpunkButton }" />
-            <Button Content="Clients" Margin="10" Style="{StaticResource CyberpunkButton }" />
+            <Button Content="Commissions" Margin="10" Style="{StaticResource ThemeButton}"/>
+            <Button Content="Queue" Margin="10" Style="{StaticResource ThemeButton }" />
+            <Button Content="Clients" Margin="10" Style="{StaticResource ThemeButton }" />
         </StackPanel>
 
         <Grid Grid.Row="2" VerticalAlignment="Bottom" Height="auto">
             
-            <Button VerticalAlignment="Bottom" Content="Settings" Margin="10" Style="{StaticResource CyberpunkButton}"
+            <Button VerticalAlignment="Bottom" Content="Settings" Margin="10" Style="{StaticResource ThemeButton}"
                     Click="ShowSettingsPage"/>
         </Grid>
 
