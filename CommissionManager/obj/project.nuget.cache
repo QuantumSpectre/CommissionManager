@@ -1,8 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "NA/lOkeyO6XcsTfM8pD7CfTA/enbpfzj9tCLmJboiI5aR+NdJUcQPOVV28Zk3ehcvGtUPWKk7NWJbJ8pjyrgzA==",
+  "dgSpecHash": "+Upp6Jyybm0MhOLSsGL7DYAi/4d6WhP7V9quToeeBE4rrH1K/2l+PunjcrKowT2wtD6HG5oZLJkJk5Iy4f010g==",
   "success": true,
   "projectFilePath": "C:\\Users\\charl\\Documents\\Projects\\CommissionManager\\CommissionManager\\CommissionManager\\CommissionManager.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\charl\\.nuget\\packages\\dapper\\2.1.15\\dapper.2.1.15.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.13\\microsoft.data.sqlite.core.7.0.13.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.13\\microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.13\\microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.13\\microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.13\\microsoft.entityframeworkcore.relational.7.0.13.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.13\\microsoft.entityframeworkcore.sqlite.core.7.0.13.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\charl\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

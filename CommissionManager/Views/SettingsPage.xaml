@@ -10,9 +10,9 @@
 
 
     <Grid>
-        <!-- Main Content -->
+        
         <Grid Background="#272932" HorizontalAlignment="Center" Width="180">
-            <!-- Page Content Goes Here -->
+            
 
                 <Button Content="Settings Placeholder" Style="{StaticResource ThemeButton}"
                         Padding="10" Width="auto">

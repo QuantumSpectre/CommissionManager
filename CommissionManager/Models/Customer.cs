@@ -2,7 +2,7 @@
 
 namespace CommissionManager.Models
 {
-    class Customer
+    public class Customer
     {
         public string Name { get; set; }
         public string CustomerId { get; set; }

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "X0h55GzbTTRVnhTmj3RRh4ZHTQZhFMVKiuM7znIGhMQ=",
+  "Source": "CommissionManager.API",
+  "BasePath": "_content/CommissionManager.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
