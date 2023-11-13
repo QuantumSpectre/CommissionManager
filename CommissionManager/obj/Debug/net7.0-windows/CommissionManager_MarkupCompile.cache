@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\App.xaml
-4-739547106
+5238967665
 
-11-767452386
+11-416691332
 215-906266457
-MainWindow.xaml;UserControls\Sidebar.xaml;Views\DashboardPage.xaml;Views\SettingsPage.xaml;
+MainWindow.xaml;UserControls\Sidebar.xaml;Views\DashboardPage.xaml;Views\SettingsPage.xaml;Views\SignupPage.xaml;
 
 False
 

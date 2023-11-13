@@ -4,10 +4,10 @@ namespace CommissionManager.Models
 {
     public class Artist
     {
-        public int ArtistId { get; set; }
+        public int Id { get; set; }
         public List<Commission> Commissions { get; set; }
-        public string? name { get; set; }
-        public UserProfile UserProfile { get; set; }
+        public string? Name { get; set; }
+        
 
         public Artist()
         {

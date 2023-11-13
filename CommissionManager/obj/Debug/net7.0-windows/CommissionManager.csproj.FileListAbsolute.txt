@@ -52,6 +52,7 @@ C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\Commission
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\UserControls\Sidebar.g.cs
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\Views\DashboardPage.g.cs
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\Views\SettingsPage.g.cs
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\Views\SignupPage.g.cs
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\CommissionManager_MarkupCompile.cache
@@ -61,6 +62,7 @@ C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\Commission
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\UserControls\Sidebar.baml
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\Views\DashboardPage.baml
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\Views\SettingsPage.baml
+C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\Views\SignupPage.baml
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\CommissionManager.g.resources
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\CommissionManager.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\charl\Documents\Projects\CommissionManager\CommissionManager\CommissionManager\obj\Debug\net7.0-windows\CommissionManager.AssemblyInfoInputs.cache

@@ -1,7 +1,7 @@
 ﻿using CommissionManager.API.Models;
-using Dapper;
+using CommissionManager.API.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
+using Dapper;
 
 namespace CommissionManager.API.Controllers
 {
@@ -9,34 +9,22 @@ namespace CommissionManager.API.Controllers
     [ApiController]
     public class ArtistsController : ControllerBase
     {
+        private readonly IArtistRepository _artistRepository;
+
         private readonly IConfiguration _configuration;
 
-        public ArtistsController(IConfiguration configuration)
+        public ArtistsController(IConfiguration configuration, IArtistRepository artistRepository)
         {
+            _artistRepository = artistRepository;
             _configuration = configuration;
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetArtistById(int id)
+        public async Task<IActionResult> GetArtistById(Guid id)
         {
             try
             {
-                Artist artist;
-
-                string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-                using (var connection = new SqlConnection(connectionString))
-                {
-                    await connection.OpenAsync();
-
-                    artist = await connection.QuerySingleOrDefaultAsync<Artist>("SELECT * FROM Artists WHERE Id = @Id", new { Id = id });
-
-                    if (artist == null)
-                    {
-                        return NotFound();
-                    }
-                }
-
+                Artist artist = await _artistRepository.GetArtistByIdAsync(id);
                 return Ok(artist);
             }
             catch (Exception ex)
@@ -50,21 +38,7 @@ namespace CommissionManager.API.Controllers
         {
             try
             {
-                string sql = "SELECT * FROM Artists";
-
-                string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-                List<Artist> artists = new List<Artist>();
-
-                using (var connection = new SqlConnection(connectionString))
-                {
-                    await connection.OpenAsync();
-
-                    artists = (await connection.QueryAsync<Artist>(sql)).ToList();
-
-                    await connection.CloseAsync();
-                }
-
+                var artists = await _artistRepository.GetArtistsAsync();
                 return Ok(artists);
             }
             catch (Exception ex)
@@ -78,22 +52,8 @@ namespace CommissionManager.API.Controllers
         {
             try
             {
-                string sql = @"
-                    INSERT INTO Artists (Name)
-                    Values (@Name);
-                    SELECT CAST(SCOPE_IDENTITY() AS INT);
-                    ";
-
-                string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-                using (var connection = new SqlConnection(connectionString))
-                {
-                    await connection.OpenAsync();
-
-                    int newArtistId = await connection.QuerySingleAsync<int>(sql, artist);
-
-                    return Ok(newArtistId);
-                }
+                Guid newArtistId = await _artistRepository.CreateArtistAsync(artist);
+                return Ok(newArtistId);
             }
             catch (Exception ex)
             {
@@ -102,39 +62,12 @@ namespace CommissionManager.API.Controllers
         }
 
         [HttpPatch("{id}")]
-        public async Task<IActionResult> UpdateArtistAsync(int id, [FromBody] Artist updatedArtist)
+        public async Task<IActionResult> UpdateArtistAsync(Guid id, [FromBody] Artist updatedArtist)
         {
             try
             {
-                if (updatedArtist == null)
-                {
-                    return BadRequest("Updated artist data is null.");
-                }
-
-                string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-                using (var connection = new SqlConnection(connectionString))
-                {
-                    await connection.OpenAsync();
-
-                    var existingArtist = await connection.QuerySingleOrDefaultAsync<Artist>("SELECT * FROM Artists WHERE Id = @Id", new { Id = id });
-
-                    if (existingArtist == null)
-                    {
-                        return NotFound();
-                    }
-
-                    string updateSql = @"
-                        UPDATE Artists
-                        SET Name = @Name
-                        WHERE Id = @Id;
-                    ";
-
-                    await connection.ExecuteAsync(updateSql, updatedArtist);
-
-                    await connection.CloseAsync();
-                    return Ok(updatedArtist);
-                }
+                await _artistRepository.UpdateArtistAsync(id, updatedArtist);
+                return Ok(updatedArtist);
             }
             catch (Exception ex)
             {
@@ -143,29 +76,12 @@ namespace CommissionManager.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteArtist(int id)
+        public async Task<IActionResult> DeleteArtist(Guid id)
         {
             try
             {
-                string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-                using (var connection = new SqlConnection(connectionString))
-                {
-                    await connection.OpenAsync();
-
-                    var existingArtist = await connection.QuerySingleOrDefaultAsync<Artist>("SELECT * FROM Artists WHERE Id = @Id", new { Id = id });
-
-                    if (existingArtist == null)
-                    {
-                        return NotFound();
-                    }
-
-                    string deleteSql = "DELETE FROM Artists WHERE Id = @Id";
-                    await connection.ExecuteAsync(deleteSql, new { Id = id });
-
-                    await connection.CloseAsync();
-                    return Ok(new { message = "Artist deleted successfully" });
-                }
+                await _artistRepository.DeleteArtistAsync(id);
+                return Ok(new { message = "Artist deleted successfully" });
             }
             catch (Exception ex)
             {

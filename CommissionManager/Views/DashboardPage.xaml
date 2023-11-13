@@ -9,16 +9,76 @@
 
 
     <Grid>
-        
-        <Grid Background="#272932" HorizontalAlignment="Center" Width="180">
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-            <Button Content="Dashboard Placeholder" Style="{StaticResource ThemeButton}"
-                        Padding="10" Width="auto">
+        <!--Toolbar-->
 
-            </Button>
+        <Grid Grid.Row="0" Background="#2a3638">
+
+        </Grid>
+
+        <!--Commission Quick View-->
+        <Grid Grid.Row="1" Background="#99b898" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Style="{StaticResource HoverBorder}" VerticalAlignment="Stretch" CornerRadius="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Completed Commission" TextWrapping="Wrap" Padding="10" Foreground="#fecea8" FontSize="15" FontFamily="Segoe UI" VerticalAlignment="Center" TextAlignment="Center" />
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="1" Style="{StaticResource HoverBorder}" VerticalAlignment="Stretch" CornerRadius="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Current Commission" TextWrapping="Wrap" Padding="10" Foreground="#fecea8" FontSize="15" FontFamily="Segoe UI" VerticalAlignment="Center" TextAlignment="Center" />
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="2" Style="{StaticResource HoverBorder}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Queued" TextWrapping="Wrap" Padding="10" Foreground="#fecea8" FontSize="15" FontFamily="Segoe UI" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="3" Style="{StaticResource HoverBorder}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="Queued" TextWrapping="Wrap" Padding="10" Foreground="#fecea8" FontSize="15" FontFamily="Segoe UI" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+            </Border>
 
 
+            <StackPanel Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+
+            </StackPanel>
+        </Grid>
+
+        <!---->
+        <Grid Grid.Row="2">
 
         </Grid>
     </Grid>

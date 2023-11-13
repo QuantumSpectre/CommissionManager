@@ -4,7 +4,7 @@ namespace CommissionManager.API.Models
 {
     public class Client
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public List<Commission> Commissions { get; set; }
 

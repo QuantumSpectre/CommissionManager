@@ -7,6 +7,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        //sets the config file allowing connection string to be used
         var configuration = new ConfigurationBuilder()
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -14,12 +15,19 @@ internal class Program
 
         string connectionString = configuration.GetConnectionString("DefaultConnection");
 
-
-        CreateHostBuilder(args).Build().Run();
+        if (TestConnection(connectionString))
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+        else
+        {
+            Console.WriteLine("Exiting due to a database connection failure.");
+        }
         
        
     }
 
+    //the actual method that starts the web api hence the webbuilder method being called
     public static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
             .ConfigureWebHostDefaults(webBuilder =>
@@ -27,6 +35,8 @@ internal class Program
                 webBuilder.UseStartup<Startup>();
             });
 
+
+    //A simple test connection for my own satisfaction
     static bool TestConnection(string connectionString)
     {
         using (SqlConnection connection = new SqlConnection(connectionString))
