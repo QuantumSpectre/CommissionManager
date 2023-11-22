@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CommissionManager.GUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5f888b168fe49abcd350fc3f99f6624ce1bebb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CommissionManager.GUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CommissionManager.GUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

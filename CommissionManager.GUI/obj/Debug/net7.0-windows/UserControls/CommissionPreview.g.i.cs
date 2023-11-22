@@ -53,7 +53,7 @@ namespace CommissionManager.GUI.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CommissionManager.GUI;component/usercontrols/commissionpreview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CommissionManager.GUI;V1.0.0.0;component/usercontrols/commissionpreview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UserControls\CommissionPreview.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

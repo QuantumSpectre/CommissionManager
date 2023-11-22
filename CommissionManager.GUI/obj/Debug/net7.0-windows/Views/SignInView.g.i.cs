@@ -69,7 +69,7 @@ namespace CommissionManager.GUI.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CommissionManager.GUI;component/views/signinview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CommissionManager.GUI;V1.0.0.0;component/views/signinview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\SignInView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
