@@ -25,6 +25,7 @@ namespace CommissionManagerAPP
             services.AddScoped<ICommissionRepository, CommissionRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserProfileService, UserProfileService>();
+            services.AddScoped<ICommissionService, CommissionService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

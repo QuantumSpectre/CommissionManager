@@ -43,6 +43,42 @@ namespace CommissionManagerAPP.Repositories
             }
         }
 
+        public async Task<List<Commission>> GetCommissionByEmailAsync(string email)
+        {
+            try
+            {
+                List<Commission> commissions;
+
+                string connectionString = _configuration.GetConnectionString("DefaultConnection");
+
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+
+                    commissions = (await connection.QueryAsync<Commission>("SELECT * FROM Commissions WHERE Email = @Email", new { Email = email })).ToList();
+
+                    if (commissions.Count == 0)
+                    {
+                        throw new CommissionNotFoundException($"No commissions found with email {email}");
+                    }
+                }
+
+                return commissions;
+            }
+            catch (CommissionNotFoundException)
+            {
+                // Logging
+                Console.WriteLine($"CommissionNotFoundException in GetCommissionByEmailAsync");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                // Logging
+                Console.WriteLine($"An error occurred in GetCommissionByEmailAsync: {ex.Message}");
+                throw;
+            }
+        }
+
         public async Task<Commission> GetCommissionByIdAsync(Guid id)
         {
             try
@@ -59,7 +95,7 @@ namespace CommissionManagerAPP.Repositories
 
                     if (commission == null)
                     {
-                        throw new CommissionNotFoundException($"Commission with ID {id} not found");
+                        throw new CommissionNotFoundException($"Commission with email {id} not found");
                     }
                 }
 
@@ -86,8 +122,8 @@ namespace CommissionManagerAPP.Repositories
                 Guid commissionId = Guid.NewGuid();
 
                 string sql = @"
-            INSERT INTO Commissions (Id, Description, ClientID, CommissionedDate, Deadline, Status)
-            VALUES (@Id, @Description, @ClientId, @CommissionedDate, @Deadline, @Status);";
+            INSERT INTO Commissions (Id, Description, ClientID, CommissionedDate, Deadline, Status, Email)
+            VALUES (@Id, @Description, @ClientId, @CommissionedDate, @Deadline, @Status, @Email);";
 
                 string connectionString = _configuration.GetConnectionString("DefaultConnection");
 
@@ -102,7 +138,8 @@ namespace CommissionManagerAPP.Repositories
                         commission.ClientId,
                         commission.CommissionedDate,
                         commission.Deadline,
-                        commission.status
+                        commission.status,
+                        commission.email
                     });
 
                     await connection.CloseAsync();
@@ -200,6 +237,61 @@ namespace CommissionManagerAPP.Repositories
                 throw;
             }
         }
+
+        public bool IsUserAuthorized(string userEmail, Guid commissionId)
+        {
+            try
+            {
+                Commission existingCommission = GetCommissionByIdAsync(commissionId).Result;
+
+                //Check if the existing commission's email matches the user's email
+                return existingCommission != null && existingCommission.email == userEmail;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred in IsUserAuthorized: {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task<List<Commission>> GetRecentCommissionsAsync(string email)
+        {
+            try
+            {
+                string sql = "SELECT TOP 4 * " +
+                             "FROM Commissions " +
+                             "WHERE email = @Email " +
+                             "ORDER BY " +
+                             "CASE " +
+                             "WHEN status = 'Completed' THEN 0 " +
+                             "WHEN status = 'Queued' THEN 1 " +
+                             "WHEN status = 'In Progress' THEN 2 " +
+                             "ELSE 3 " +
+                             "END, CommissionedDate DESC";
+
+                string connectionString = _configuration.GetConnectionString("DefaultConnection");
+
+                List<Commission> recentCommissions = new List<Commission>();
+
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+
+                    recentCommissions = (await connection.QueryAsync<Commission>(sql, new { Email = email })).ToList();
+
+                    await connection.CloseAsync();
+                }
+
+                return recentCommissions;
+            }
+            catch (Exception ex)
+            {
+                // Logging
+                Console.WriteLine($"An error occurred in GetRecentCommissionsByEmailAsync: {ex.Message}");
+                throw;
+            }
+        }
+
     }
 }
 

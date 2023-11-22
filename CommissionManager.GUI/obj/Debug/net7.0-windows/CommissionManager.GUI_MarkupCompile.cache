@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\charl\source\repos\CommissionManager.GUI\obj\Debug\net7.0-windows\
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\
 CommissionManager.GUI
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\charl\source\repos\CommissionManager.GUI\App.xaml
-7-2063920575
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\App.xaml
+9-34192034
 
-14-351671400
+17308174098
 201589635745
-MainWindow.xaml;Styles.xaml;UserControls\Sidebar.xaml;Views\DashboardView.xaml;Views\SettingsView.xaml;Views\SignInView.xaml;Views\SignupView.xaml;
+MainWindow.xaml;Styles.xaml;UserControls\CommissionPreview.xaml;UserControls\Sidebar.xaml;Views\CommissionView.xaml;Views\DashboardView.xaml;Views\SettingsView.xaml;Views\SignInView.xaml;Views\SignupView.xaml;
 
 False
 

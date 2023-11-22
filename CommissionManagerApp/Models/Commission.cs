@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CommissionManagerAPP.Models
 {
@@ -10,6 +11,10 @@ namespace CommissionManagerAPP.Models
         public Guid Id { get; set; }
         public Guid ClientId { get; set; }
         public String status { get; set; }
+
+        //regex for email format
+        [RegularExpression(@"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$", ErrorMessage = "Invalid email format.")]
+        public string? email { get; set; }
 
         public Commission()
         {

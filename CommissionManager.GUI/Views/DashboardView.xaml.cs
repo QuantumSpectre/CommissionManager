@@ -1,4 +1,5 @@
 ﻿using CommissionManager.GUI.Models;
+using CommissionManager.GUI.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,24 +22,48 @@ namespace CommissionManager.GUI.Views
     /// </summary>
     public partial class DashboardView : Page
     {
-        public UserProfile Profile;
-
-        public Frame? mainFrame { get; set; }
+        public UserProfile Profile { get; set; }
+        public Frame? MainFrame { get; set; }
+        
 
         public DashboardView()
         {
             InitializeComponent();
+        }
+
+        public void Initialize(UserProfile profile, Frame mainFrame)
+        {
+            Profile = profile;
+            MainFrame = mainFrame;
+            Welcome_Text.Text = "Welcome " + profile.Username;
 
 
-            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainFrame = mainWindow.MainFrame;
         }
 
         private void ShowSettingsPage(object sender, RoutedEventArgs e)
         {
-            if (mainFrame != null)
+            if (MainFrame != null)
             {
-                mainFrame.Navigate(new SettingsView());
+                MainFrame.Navigate(new SettingsView());
+            }
+        }
+
+        private void NavigateToCommissionView(Commission commission)
+        {
+            if (MainFrame != null)
+            {
+                CommissionView commissionView = new CommissionView();
+                commissionView.DataContext = commission;
+                MainFrame.Navigate(commissionView);
+            }
+        }
+
+        private void CommissionPreview_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is CommissionPreview commissionPreview)
+            {
+                Commission commissionData = (Commission)commissionPreview.DataContext;
+                NavigateToCommissionView(commissionData);
             }
         }
     }

@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\charl\source\repos\CommissionManagerApp\bin\Release\net7.0\publish\</_PublishTargetUrl>
-    <History>True|2023-11-17T21:04:33.7820724Z;True|2023-11-17T12:51:54.2842056-05:00;True|2023-11-17T11:32:28.8324898-05:00;</History>
+    <_PublishTargetUrl>C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManagerApp\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2023-11-21T12:54:34.8506462Z;True|2023-11-19T14:37:44.5794656-05:00;True|2023-11-17T16:04:33.7820724-05:00;True|2023-11-17T12:51:54.2842056-05:00;True|2023-11-17T11:32:28.8324898-05:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

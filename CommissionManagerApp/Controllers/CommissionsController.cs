@@ -1,5 +1,7 @@
-﻿using CommissionManagerAPP.Models;
+﻿using CommissionManager.GUI.Models;
+using CommissionManagerAPP.Models;
 using CommissionManagerAPP.Repositories;
+using CommissionManagerAPP.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CommissionManager.API.Controllers
@@ -15,23 +17,25 @@ namespace CommissionManager.API.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly ICommissionRepository _commissionRepository;
+        private readonly ICommissionService _commissionService;
 
         //obtain config to get connection stream
-        public CommissionsController(IConfiguration configuration, ICommissionRepository commissionRepository)
+        public CommissionsController(IConfiguration configuration, ICommissionRepository commissionRepository, ICommissionService commissionService)
         {
             _configuration = configuration;
             _commissionRepository = commissionRepository;
+            _commissionService = commissionService;
         }
-        
-        //get specific com by ID property
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetCommissionById(Guid id)
+
+        //get specific com by email property
+        [HttpGet("{email}")]
+        public async Task<IActionResult> GetCommissionByEmail([FromQuery] string email)
         {
             try
             {
-                Commission commission = await _commissionRepository.GetCommissionByIdAsync(id);
+               List<Commission> commission = await _commissionService.GetCommissionsByEmailAsync(email);
 
-                return Ok(commission); // 200 OK with the commission data
+                return Ok(commission); 
             }
             catch (Exception ex)
             {
@@ -39,23 +43,6 @@ namespace CommissionManager.API.Controllers
             }
         }
 
-        //Get all those commissions 
-        [HttpGet]
-        public async Task<IActionResult> GetCommissionsAsync()
-        {
-            try
-            {
-               var commissions = await _commissionRepository.GetCommissionsAsync();
-
-                return Ok(commissions);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Error: {ex.Message}");
-            }
-        }
-
-        
         [HttpPost]
         public async Task<IActionResult> CreateCommissionAsync([FromBody] Commission commission)
         {
@@ -72,10 +59,17 @@ namespace CommissionManager.API.Controllers
         }
 
         [HttpPatch("{id}")]
-        public async Task<IActionResult> UpdateCommissionAsync(Guid id, [FromBody] Commission updatedCommission)
+        public async Task<IActionResult> UpdateCommissionAsync(Guid id, [FromBody] Commission updatedCommission, [FromQuery] string email)
         {
             try
             {
+                // Check email for authorization
+                //I'm certain i can return the object if they pass in this code but for simplicity lets not
+                if (!_commissionRepository.IsUserAuthorized(email, id))
+                {
+                    return Unauthorized("Unauthorized: User is not allowed to update this commission.");
+                }
+                //Call update method
                 await _commissionRepository.UpdateCommissionAsync(id, updatedCommission);
 
                 return Ok(updatedCommission);
@@ -87,8 +81,13 @@ namespace CommissionManager.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCommission(Guid id)
+        public async Task<IActionResult> DeleteCommission(Guid id, [FromQuery] string email)
         {
+            if (!_commissionRepository.IsUserAuthorized(email, id))
+            {
+                return Unauthorized("Unauthorized: User is not allowed to update this commission.");
+            }
+
             try
             {
                 await _commissionRepository.DeleteCommissionAsync(id);
@@ -98,6 +97,22 @@ namespace CommissionManager.API.Controllers
             catch (Exception ex)
             {
                 return BadRequest($"Error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("recent/{email}")]
+        public async Task<IActionResult> GetRecentCommissionsAsync([FromRoute] string email)
+        {
+            try
+            {
+                var recentCommissions = await _commissionService.GetRecentCommissionsAsync(email);
+
+                return Ok(recentCommissions);
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

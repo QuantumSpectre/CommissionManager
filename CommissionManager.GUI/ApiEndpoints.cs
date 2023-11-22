@@ -9,7 +9,7 @@ namespace CommissionManager.GUI
 {
     public static class ApiEndpoints
     {
-        public const string BaseUrl = "https://localhost:5000"; 
+        public const string BaseUrl = "http://localhost:5000"; 
         public const string Users = BaseUrl + "/api/Users";
         public const string VerifyPassword = BaseUrl + "/api/Users/VerifyPassword";
     }

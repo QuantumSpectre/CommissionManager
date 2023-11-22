@@ -1,0 +1,39 @@
+﻿<Page x:Class="CommissionManager.GUI.Views.CommissionView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CommissionManager.GUI.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CommissionView"
+      Background="#967a6a">
+
+    <Grid Margin="20">
+
+        <Border Background="#e7dccc" CornerRadius="10" >
+
+            <StackPanel Margin="20">
+                <TextBlock Text="Commission Details" FontSize="24" Foreground="Black" Margin="0,0,0,10"/>
+
+                <!-- Commission Properties -->
+                <TextBlock Text="Commissioned Date:" Foreground="Black" FontSize="18"/>
+                <TextBlock Text="{Binding CommissionedDate}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Deadline:" Foreground="Black" FontSize="18"/>
+                <TextBlock Text="{Binding Deadline}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Description:" Foreground="Black" FontSize="18"/>
+                <TextBlock Text="{Binding Description}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Client ID:" Foreground="Black" FontSize="18"/>
+                <TextBlock Text="{Binding ClientId}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Status:" Foreground="Black" FontSize="18"/>
+                <TextBlock Text="{Binding Status}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+            </StackPanel>
+
+        </Border>
+    </Grid>
+
+</Page>

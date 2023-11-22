@@ -1,4 +1,5 @@
-﻿using CommissionManager.GUI.Views;
+﻿using CommissionManager.GUI.Models;
+using CommissionManager.GUI.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,19 +28,15 @@ namespace CommissionManager.GUI
         public Frame MainFrame { get; set; }
         public HttpClientService _httpClientService { get; set; }
 
+        public UserProfile Profile { get; set; }
+        public AuthToken AuthToken { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
             SetProperties();
 
-            if (IsUserAuthenticated())
-            {
-                _MainFrame.Navigate(new DashboardView());
-            }
-            else
-            {
-                _MainFrame.Navigate(new SignInView());
-            }
+            _MainFrame.Navigate(new SignInView());
         }
 
         public void SetProperties()
@@ -48,16 +45,6 @@ namespace CommissionManager.GUI
             MainFrame = _MainFrame;
             _MainFrame.Navigate(new DashboardView());
         }
-
-        private bool IsUserAuthenticated()
-        {
-            bool Authenticated = false;
-
-            return Authenticated;
-        }
-
-        
-
     }
 
 

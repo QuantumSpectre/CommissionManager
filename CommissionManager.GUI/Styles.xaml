@@ -47,7 +47,7 @@
     <Style x:Key="ThemeTextBlock" TargetType="TextBlock">
         <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
         <Setter Property="TextBlock.Padding" Value="10" />
-        <Setter Property="TextBlock.Foreground" Value="#fecea8"/>
+        <Setter Property="TextBlock.Foreground" Value="Black"/>
         <Setter Property="TextBlock.FontFamily" Value="Segoe UI"/>
         <Setter Property="TextBlock.VerticalAlignment"  Value="Center"/>
         <Setter Property="TextBlock.TextAlignment" Value="Center"/>

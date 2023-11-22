@@ -27,42 +27,58 @@ namespace CommissionManager.GUI.Views
         public SignupView()
         {
             InitializeComponent();
+
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            httpClientService = mainWindow._httpClientService;
         }
 
         private async void RegistrationButton_Clicked(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            var mainFrame = mainWindow.MainFrame;
+
             if (httpClientService == null)
             {
                 //error handling
                 return;
             }
 
-            UserProfile userProfile = new UserProfile()
+            if (PasswordBox.Password == ConfirmPasswordBox.Password)
             {
-                Username = UsernameTextBox.Text,
-                Email = EmailTextBox.Text,
-            };
-
-            try
-            {
-                var response = await httpClientService.PostAsync(ApiEndpoints.Users, userProfile);
-
-                if (response.IsSuccessStatusCode)
+                UserProfile userProfile = new UserProfile()
                 {
-                    //Regestration success!
-                    MessageBox.Show("Regestration Successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Username = UsernameTextBox.Text,
+                    Email = EmailTextBox.Text,
+                    password = PasswordBox.Password,
+                };
+
+                try
+                {
+                    var response = await httpClientService.PostAsync(ApiEndpoints.Users, userProfile);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        //Regestration success!
+                        MessageBox.Show("Regestration Successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        mainWindow.AuthToken = new AuthToken(EmailTextBox.Text, true);
+
+                        mainFrame.Navigate(new DashboardView());
+                    }
+                    else
+                    {
+                        //Registration failure
+                        MessageBox.Show($"Registration failed. Status code: {response.StatusCode}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    //Registration failure
-                    MessageBox.Show($"Registration failed. Status code: {response.StatusCode}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    //Logging
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
                 }
             }
-            catch (Exception ex)
-            {
-                //Logging
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            else { return; }
             }
         }
     }
-}

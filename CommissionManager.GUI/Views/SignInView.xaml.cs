@@ -1,4 +1,5 @@
 ﻿using CommissionManager.GUI.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +24,14 @@ namespace CommissionManager.GUI.Views
     {
         public HttpClientService httpClientService { get; set; }
         public Frame? mainFrame { get; set; }
+        public UserProfile profile { get; set; }
 
         public SignInView()
         {
             InitializeComponent();
+
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+            mainFrame = mainWindow?.MainFrame;
         }
 
         private async void SignInButtonClicked(object sender, RoutedEventArgs e)
@@ -45,18 +50,37 @@ namespace CommissionManager.GUI.Views
             {
                 Email = EmailTextBox.Text,
                 Password = PasswordBox.Password,
+
+               
             };
 
             try
             {
-                var response = await httpClientService.PostAsync("http://localhost:5000/api/users/VerifyPassword", userRequest );
+                var response = await httpClientService.PostAsync(ApiEndpoints.VerifyPassword, userRequest );
 
                 if (response.IsSuccessStatusCode)
                 {
                     // User authentication succeeded
                     MessageBox.Show("Sign-in Successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                    GoToDashboard();
+                    mainWindow.AuthToken = new AuthToken(EmailTextBox.Text, true);
+
+                    var userProfileResponse = await httpClientService.GetAsync(ApiEndpoints.Users + "/?email=" + userRequest.Email);
+
+                    if(userProfileResponse.IsSuccessStatusCode)
+                    {
+                        string userProfileJson = await userProfileResponse.Content.ReadAsStringAsync();
+
+                        UserProfile userProfile = JsonConvert.DeserializeObject<UserProfile>(userProfileJson);
+
+                        mainWindow.Profile = userProfile;
+
+                        DashboardView dashboardView = new DashboardView();
+
+                        dashboardView.Initialize(userProfile, mainFrame);
+
+                        mainFrame.Navigate(dashboardView);
+                    }
                 }
                 else
                 {
@@ -71,14 +95,14 @@ namespace CommissionManager.GUI.Views
             }
         }
 
-        public void GoToDashboard()
+        private void RegisterNewUser(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
             mainFrame = mainWindow.MainFrame;
 
-            if(mainWindow != null)
+            if (mainWindow != null)
             {
-                mainFrame.Navigate( new DashboardView());
+                mainFrame.Navigate(new SignupView());
             }
         }
     }

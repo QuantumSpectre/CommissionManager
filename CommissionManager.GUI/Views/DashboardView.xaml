@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:CommissionManager.GUI.Views"
+      xmlns:local1="clr-namespace:CommissionManager.GUI.UserControls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DashboardView">
@@ -18,24 +19,24 @@
 
         <!--Toolbar-->
 
-        <Grid Grid.Row="0" Background="#2a3638">
+        <Grid Grid.Row="0" Background="#967a6a">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="150"/>
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <TextBlock Background="MintCream" Foreground="Black" Text="{Binding Artist.Name, StringFormat = 'Welcome {0}'}">
-                
-            </TextBlock>
-            
-            <Border Grid.Column="2" Background="MintCream" Width="100" HorizontalAlignment="Right">
-                
+            <Border Grid.Column="0" Background="#e7dccc" HorizontalAlignment="Stretch">
+                <TextBlock x:Name="Welcome_Text" Foreground="Black" Text="Welcome" VerticalAlignment="Center" TextAlignment="Center"/>
+            </Border>
+
+            <Border Grid.Column="2" Background="#e7dccc" Width="100" HorizontalAlignment="Right">
+
             </Border>
         </Grid>
 
         <!--Commission Quick View-->
-        <Grid Grid.Row="1" Background="#99b898" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid Grid.Row="1" Background="#DDBEA9" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*" />
@@ -44,50 +45,12 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Style="{StaticResource HoverBorder}" VerticalAlignment="Stretch" CornerRadius="5" HorizontalAlignment="Stretch">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="1*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="Completed Commission" Style="{StaticResource ThemeTextBlock}"/>
-                </Grid>
-            </Border>
-
-            <Border Grid.Column="1" Style="{StaticResource HoverBorder}" VerticalAlignment="Stretch" CornerRadius="5" HorizontalAlignment="Stretch">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="1*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="Current Commission" TextWrapping="Wrap" Padding="10" Foreground="#fecea8" FontSize="15" FontFamily="Segoe UI" VerticalAlignment="Center" TextAlignment="Center" />
-                </Grid>
-            </Border>
-
-            <Border Grid.Column="2" Style="{StaticResource HoverBorder}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="5">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="1*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="Queued" TextWrapping="Wrap" Padding="10" Foreground="#fecea8" FontSize="15" FontFamily="Segoe UI" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </Grid>
-            </Border>
-
-            <Border Grid.Column="3" Style="{StaticResource HoverBorder}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="5">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="1*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock Grid.Row="0" Text="Queued" TextWrapping="Wrap" Padding="10" Foreground="#fecea8" FontSize="15" FontFamily="Segoe UI" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </Grid>
-            </Border>
+            <local1:CommissionPreview Grid.Column="0" Margin="10" DataContext="{Binding CompletedCommission}" MouseLeftButtonDown="CommissionPreview_Click"/>
+            <local1:CommissionPreview Grid.Column="1" Margin="10" DataContext="{Binding CurrentCommission}" MouseLeftButtonDown="CommissionPreview_Click"/>
+            <local1:CommissionPreview Grid.Column="2" Margin="10" DataContext="{Binding QueuedCommission1}" MouseLeftButtonDown="CommissionPreview_Click"/>
+            <local1:CommissionPreview Grid.Column="3" Margin="10" DataContext="{Binding QueuedCommission2}" MouseLeftButtonDown="CommissionPreview_Click"/>
 
 
-            <StackPanel Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Stretch">
-
-            </StackPanel>
         </Grid>
 
         <!---->

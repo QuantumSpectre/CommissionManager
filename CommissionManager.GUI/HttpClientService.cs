@@ -21,6 +21,11 @@ namespace CommissionManager.GUI
             }
         }
 
+        public async Task<HttpResponseMessage> GetAsync(string url)
+        {
+            return await _httpClient.GetAsync(url);
+        }
+
         public void Dispose()
         {
             _httpClient.Dispose();

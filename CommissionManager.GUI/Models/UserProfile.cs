@@ -12,6 +12,7 @@ namespace CommissionManager.GUI.Models
         public string Username { get; set; }
         public string Email { get; set; }
         public DateTime? CreatedDate { get; set; }
+        public string? password { get; set; }
 
         public UserProfile()
         {
