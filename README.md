@@ -2,6 +2,8 @@ Project: CommissionManager
 
 Overview
 
+WARNING - Currently in the minimum viable product stage!
+
   CommissionManager is a comprehensive GUI-based WPF application designed to streamline the workflow of artists, empowering them to seamlessly manage commissions, maintain a client       database, and provide transparent information to their patrons. Currently in its early stages of development, CommissionManager aspires to become an indispensable tool for artists.
 
 Motivation
@@ -21,7 +23,7 @@ Planned Features
 
   Commission Sheet: A customizable commission sheet to clearly outline pricing, terms, and conditions for potential clients.
 
-  Client-Facing Web Application: A dedicated web application for clients to conveniently access commission information, view the artist's queue, and stay informed about project           progress.
+  Client-Facing Web Application: A dedicated web application for clients to conveniently access commission information, view the artist's queue, and stay informed about project progress.
 
   Calendar View: A comprehensive calendar view for long-term planning and scheduling, ensuring timely project completion.
 
