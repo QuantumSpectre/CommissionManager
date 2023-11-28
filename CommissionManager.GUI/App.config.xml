@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-  <connectionStrings>
-    <!--Add your connection strings here -->
-    <add name="CommissionManagerDatabase" connectionString="Server=127.0.0.1;Port=3306;Database=commanagerschema;User=root;Password=Ukulele1994" providerName="MySql.Data.MySqlClient"/>
-
-  </connectionStrings>
-</configuration>
