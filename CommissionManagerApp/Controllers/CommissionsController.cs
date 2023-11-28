@@ -9,8 +9,6 @@ namespace CommissionManager.API.Controllers
     //AS per the SOLID principles every method is responsible for a specific action such as Creating updating deleting and retrieving.
     //Each method is closed for modification as if we want more functionality added we can do so without modifying the existing code.
     //Because the code uses abstractions rather than concrete implementations its also adherant to the Dependancy inversion principle.
-
-
     [Route("api/commissions")]
     [ApiController]
     public class CommissionsController : ControllerBase
@@ -28,14 +26,34 @@ namespace CommissionManager.API.Controllers
         }
 
         //get specific com by email property
-        [HttpGet("{email}")]
-        public async Task<IActionResult> GetCommissionByEmail([FromQuery] string email)
+        [HttpGet("byemail/{email}")]
+        public async Task<IActionResult> GetCommissionByEmail([FromRoute] string email)
         {
             try
             {
                List<Commission> commission = await _commissionService.GetCommissionsByEmailAsync(email);
 
                 return Ok(commission); 
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("{id:guid}")]
+        public async Task<IActionResult> GetCommissionByIdAsync(Guid id)
+        {
+            try
+            {
+                Commission commission = await _commissionRepository.GetCommissionByIdAsync(id);
+
+                if (commission == null)
+                {
+                    return NotFound($"Commission with ID {id} not found");
+                }
+
+                return Ok(commission);
             }
             catch (Exception ex)
             {

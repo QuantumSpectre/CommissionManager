@@ -34,7 +34,7 @@
                     <PasswordBox x:Name="PasswordBox" Width="200" Margin="0,0,0,10"/>
 
                     <Label Content="Confirm Password:" HorizontalAlignment="Center"/>
-                    <PasswordBox x:Name="ConfirmPasswordBox" Width="200" Margin="0,0,0,10"/>
+                    <PasswordBox x:Name="ConfirmPasswordBox" Width="200" Margin="0,0,0,10" KeyDown="PasswordBox_KeyDown"/>
 
                     <Button Content="Register" Width="80" Height="30" HorizontalAlignment="Center" Click="RegistrationButton_Clicked"/>
                 </StackPanel>

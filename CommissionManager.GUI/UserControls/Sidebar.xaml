@@ -13,7 +13,6 @@
                  HorizontalAlignment="Left"
                  >
         
-        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="1*"/>
@@ -23,17 +22,13 @@
             
             <Button Content="Dashboard" Margin="10" Style="{StaticResource ThemeButton }" 
                     Click="ShowDashboardPage"/>
-            <Button Content="Commissions" Margin="10" Style="{StaticResource ThemeButton}"/>
-            <Button Content="Queue" Margin="10" Style="{StaticResource ThemeButton }" />
-            <Button Content="Clients" Margin="10" Style="{StaticResource ThemeButton }" />
-        </StackPanel>
-
-        <Grid Grid.Row="2" VerticalAlignment="Bottom" Height="auto">
             
-            <Button VerticalAlignment="Bottom" Content="Settings" Margin="10" Style="{StaticResource ThemeButton}"
-                    Click="ShowSettingsPage"/>
-        </Grid>
-
+            <Button Content="Commissions" Margin="10" Style="{StaticResource ThemeButton}"
+                    Click="ShowAllCommissionsPage"/>
+            
+            <Button Content="Clients" Margin="10" Style="{StaticResource ThemeButton }" 
+                    Click="ShowClientBookView"/>
+        </StackPanel>
     </Grid>
 
 </UserControl>

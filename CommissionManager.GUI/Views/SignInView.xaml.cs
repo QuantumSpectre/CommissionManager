@@ -105,6 +105,14 @@ namespace CommissionManager.GUI.Views
                 mainFrame.Navigate(new SignupView());
             }
         }
+
+        private void PasswordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                SignInButtonClicked(sender, e);
+            }
+        }
     }
 }
 

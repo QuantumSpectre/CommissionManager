@@ -8,6 +8,7 @@ namespace CommissionManagerAPP.Repositories
 {
     public class UserRepository : IUserRepository
     {
+        //Single Responsibility principle - handles operations related to userProfiles
         private readonly IConfiguration _configuration;
 
         private const string connectionStringName = "DefaultConnection";

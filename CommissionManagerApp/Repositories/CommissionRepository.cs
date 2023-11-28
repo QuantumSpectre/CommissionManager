@@ -5,6 +5,7 @@ using Microsoft.Data.SqlClient;
 
 namespace CommissionManagerAPP.Repositories
 {
+    //single responsibility principle - Handles operations related to commissions
     public class CommissionRepository : ICommissionRepository
     {
         private readonly IConfiguration _configuration;
@@ -95,7 +96,7 @@ namespace CommissionManagerAPP.Repositories
 
                     if (commission == null)
                     {
-                        throw new CommissionNotFoundException($"Commission with email {id} not found");
+                        throw new CommissionNotFoundException($"Commission with Id {id} not found");
                     }
                 }
 

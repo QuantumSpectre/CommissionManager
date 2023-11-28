@@ -80,5 +80,13 @@ namespace CommissionManager.GUI.Views
             }
             else { return; }
             }
+
+        private void PasswordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                RegistrationButton_Clicked(sender, e);
+            }
         }
+    }
     }

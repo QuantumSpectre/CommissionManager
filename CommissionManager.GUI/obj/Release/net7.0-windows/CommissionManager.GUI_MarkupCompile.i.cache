@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\App.xaml
-7-2063920575
+10-1898601558
 
-17-2126648518
+211209141383
 201589635745
-MainWindow.xaml;Styles.xaml;UserControls\Sidebar.xaml;Views\DashboardView.xaml;Views\SettingsView.xaml;Views\SignInView.xaml;Views\SignupView.xaml;
+MainWindow.xaml;Styles.xaml;UserControls\CommissionPreview.xaml;UserControls\Sidebar.xaml;Views\CommissionBookView.xaml;Views\CommissionView.xaml;Views\DashboardView.xaml;Views\SettingsView.xaml;Views\SignInView.xaml;Views\SignupView.xaml;
 
 True
 

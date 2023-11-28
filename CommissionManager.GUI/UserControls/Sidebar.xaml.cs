@@ -15,35 +15,60 @@ namespace CommissionManager.GUI.UserControls
         public Sidebar()
         {
             InitializeComponent();
-
-
         }
 
         private void ShowSettingsPage(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-            mainFrame = mainWindow.MainFrame;
 
+            mainFrame = mainWindow.MainFrame;
 
             if (!(mainFrame.Content is SettingsView))
             {
                 mainFrame.Navigate(new SettingsView());
             }
-            
-
-
         }
 
         private void ShowDashboardPage(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
             mainFrame = mainWindow.MainFrame;
 
-
-            if (!(mainFrame.Content is DashboardView))
+            if (DashboardView.Instance != null)
             {
-                mainFrame.Navigate(new DashboardView());
+                mainFrame?.Navigate(DashboardView.Instance);
             }
+            else
+            {
+                mainFrame?.Navigate(new DashboardView());
+            }
+        }
+
+        private void ShowAllCommissionsPage(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
+            mainFrame = mainWindow.MainFrame;
+
+            if (!(mainFrame.Content is CommissionBookView))
+            {
+                mainFrame.Navigate(new CommissionBookView());
+            }
+          
+        }
+
+        private void ShowClientBookView(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
+            mainFrame = mainWindow.MainFrame;
+
+            if (!(mainFrame.Content is ClientBookView))
+            {
+                mainFrame.Navigate(new ClientBookView());
+            }
+
         }
     }
 }

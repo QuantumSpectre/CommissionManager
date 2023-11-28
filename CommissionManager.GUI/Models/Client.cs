@@ -7,6 +7,7 @@ namespace CommissionManager.GUI.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public List<Commission> Commissions { get; set; }
+       
 
         public Client()
         {

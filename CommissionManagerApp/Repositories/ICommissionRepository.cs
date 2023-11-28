@@ -2,6 +2,7 @@
 
 namespace CommissionManagerAPP.Repositories
 {
+    //Interface Secregation Principle
     public interface ICommissionRepository
     {
         Task<List<Commission>> GetCommissionByEmailAsync(string email);

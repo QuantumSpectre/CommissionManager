@@ -49,6 +49,7 @@ C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\Commi
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\UserControls\CommissionPreview.g.cs
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\UserControls\Sidebar.g.cs
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\Views\CommissionBookView.g.cs
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\Views\CommissionView.g.cs
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\Views\DashboardView.g.cs
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\Views\SettingsView.g.cs
@@ -62,6 +63,7 @@ C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\Commi
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\UserControls\CommissionPreview.baml
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\UserControls\Sidebar.baml
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\Views\CommissionBookView.baml
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\Views\CommissionView.baml
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\Views\DashboardView.baml
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net7.0-windows\Views\SettingsView.baml

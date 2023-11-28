@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CommissionManagerAPP.Controllers
 {
-
+    //Open Closed Principle responsible for specifically CRUD operations. Closed for moding, allowing for extension.
+    //Dependency Inversion Principle - depends on abstractions rather than concrete implementations
     [Route("api/users")]
     [ApiController]
     public class UserProfileController : ControllerBase

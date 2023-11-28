@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommissionManager.GUI.Models
 {
+    //single responsibility principle - a simple auth token with but one reason for life
     public class AuthToken
     {
         public bool Authenticated {  get; set; }

@@ -10,30 +10,44 @@
       Background="#967a6a">
 
     <Grid Margin="20">
-
         <Border Background="#e7dccc" CornerRadius="10" >
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="20">
+                    <TextBlock Text="Commission Details" FontSize="24" Foreground="Black" Margin="0,0,0,10"/>
 
-            <StackPanel Margin="20">
-                <TextBlock Text="Commission Details" FontSize="24" Foreground="Black" Margin="0,0,0,10"/>
+                    <!-- Commission Properties -->
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Commissioned Date:" Foreground="Black" FontSize="18"/>
+                        <TextBox x:Name="CommissionedDate" Text="{Binding CommissionedDate, Mode=TwoWay}" Foreground="Black" FontSize="16"/>
+                    </StackPanel>
 
-                <!-- Commission Properties -->
-                <TextBlock Text="Commissioned Date:" Foreground="Black" FontSize="18"/>
-                <TextBlock Text="{Binding CommissionedDate}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Deadline:" Foreground="Black" FontSize="18"/>
+                        <TextBox x:Name="Deadline" Text="{Binding Deadline, Mode=TwoWay}" Foreground="Black" FontSize="16"/>
+                    </StackPanel>
 
-                <TextBlock Text="Deadline:" Foreground="Black" FontSize="18"/>
-                <TextBlock Text="{Binding Deadline}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Description:" Foreground="Black" FontSize="18"/>
+                        <TextBox x:Name="Description" Text="{Binding Description, Mode=TwoWay}" Foreground="Black" FontSize="16"/>
+                    </StackPanel>
 
-                <TextBlock Text="Description:" Foreground="Black" FontSize="18"/>
-                <TextBlock Text="{Binding Description}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Client ID:" Foreground="Black" FontSize="18"/>
+                        <TextBox x:Name="ClientId" Text="{Binding ClientId, Mode=TwoWay}" Foreground="Black" FontSize="16"/>
+                    </StackPanel>
 
-                <TextBlock Text="Client ID:" Foreground="Black" FontSize="18"/>
-                <TextBlock Text="{Binding ClientId}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
+                    <StackPanel Margin="0,0,0,10">
+                        <TextBlock Text="Status:" Foreground="Black" FontSize="18"/>
+                        <TextBox x:Name="Status" Text="{Binding Status, Mode=TwoWay}" Foreground="Black" FontSize="16"/>
+                    </StackPanel>
 
-                <TextBlock Text="Status:" Foreground="Black" FontSize="18"/>
-                <TextBlock Text="{Binding Status}" Foreground="Black" FontSize="16" Margin="0,0,0,10"/>
-            </StackPanel>
-
+                    <!-- Save and Delete Buttons -->
+                    <Button Content="Save Changes" Click="SaveChangesButton_Click" Margin="10" Width="200"/>
+                    <Button Content="Delete Commission" Click="DeleteCommissionButton_Click" Margin="10, 0 ,10 ,10" Width="200"/>
+                </StackPanel>
+            </ScrollViewer>
         </Border>
     </Grid>
+
 
 </Page>

@@ -2,6 +2,7 @@
 
 namespace CommissionManagerAPP.Repositories
 {
+    //Interface Secregation Principle
     public interface IClientRepository
     {
         Task<Client> GetClientByIdAsync(Guid id);

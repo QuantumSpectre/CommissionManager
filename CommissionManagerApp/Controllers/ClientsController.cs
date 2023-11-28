@@ -1,9 +1,6 @@
 ﻿using CommissionManagerAPP.Models;
 using CommissionManagerAPP.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Dapper;
-using CommissionManagerAPP.Models;
-using CommissionManagerAPP.Repositories;
 
 namespace CommissionManager.API.Controllers
 {

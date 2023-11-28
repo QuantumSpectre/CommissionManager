@@ -2,6 +2,7 @@
 
 namespace CommissionManagerAPP.Repositories
 {
+    //Interface Secregation Principle
     public interface IUserRepository
     {
         Task<bool> SaveUserProfileAsync(UserProfile userProfile);
