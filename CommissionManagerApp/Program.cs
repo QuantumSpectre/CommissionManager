@@ -1,6 +1,5 @@
 using CommissionManagerAPP;
 using Dapper;
-using Microsoft.Data.SqlClient;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,7 +15,7 @@ namespace CommissionManagerApp
 
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            if (!File.Exists("Data Source=commissionManager.db"))
+            if (File.Exists("Data Source=commissionManager.db") == false)
             {
                 SetUpDatabase();
             }
@@ -57,7 +56,7 @@ namespace CommissionManagerApp
         //A simple test connection for my own satisfaction
         static bool TestConnection(string connectionString)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
             {
                 try
                 {
@@ -71,7 +70,7 @@ namespace CommissionManagerApp
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Database connection failed: " + ex.Message);
+                    Console.WriteLine("Database connection failed: " + ex.ToString());
 
                     return false;
                 }
@@ -83,9 +82,11 @@ namespace CommissionManagerApp
             using var connection = new SqliteConnection("Data Source=commissionManager.db");
             connection.Open();
 
-            connection.Execute(@"
+            if (!TableExists(connection, "Commissions"))
+            {
+                connection.Execute(@"
         CREATE TABLE Commissions (
-            Id INTEGER PRIMARY KEY AUTOINCREMENT,
+            Id GUID PRIMARY KEY NOT NULL,
             CommissionedDate DATETIME NOT NULL,
             Deadline DATETIME NOT NULL,
             Description TEXT,
@@ -94,21 +95,11 @@ namespace CommissionManagerApp
             Email TEXT
         )
     ");
+            }
 
-            connection.Execute(@"
-        INSERT INTO Commissions (CommissionedDate, Deadline, Description, ClientId, Status, Email)
-        VALUES (@CommissionedDate, @Deadline, @Description, @ClientId, @Status, @Email)",
-                new
-                {
-                    CommissionedDate = DateTime.Now,
-                    Deadline = DateTime.Now.AddDays(14),
-                    Description = "Example commission description",
-                    ClientId = Guid.NewGuid(),
-                    Status = "Pending",
-                    Email = "example@email.com"
-                });
-
-            connection.Execute(@"
+            if (!TableExists(connection, "UserProfiles"))
+            {
+                connection.Execute(@"
         CREATE TABLE UserProfiles (
             Id GUID PRIMARY KEY,
             Username TEXT NOT NULL,
@@ -117,18 +108,24 @@ namespace CommissionManagerApp
             Password TEXT NOT NULL
         )
     ");
+            }
+        }
 
-            connection.Execute(@"
-        INSERT INTO UserProfiles (Id, Username, Email, CreatedDate, Password)
-        VALUES (@Id, @Username, @Email, @CreatedDate, @Password)",
-                new
-                {
-                    Id = Guid.NewGuid(),
-                    Username = "admin",
-                    Email = "admin@example.com",
-                    CreatedDate = DateTime.Now,
-                    Password = "password"
-                });
+        private static bool TableExists(SqliteConnection connection, string tableName)
+        {
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = @tableName";
+            command.Parameters.AddWithValue("@tableName", tableName);
+
+            using var reader = command.ExecuteReader();
+            if (reader.Read() && reader.GetInt32(0) > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using CommissionManagerAPP.Exceptions;
+using Microsoft.Data.Sqlite;
 
 namespace CommissionManagerAPP.Repositories
 {
@@ -29,7 +30,7 @@ namespace CommissionManagerAPP.Repositories
 
                 string connectionString = _configuration.GetConnectionString(connectionStringName);
 
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new SqliteConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
@@ -55,11 +56,11 @@ namespace CommissionManagerAPP.Repositories
             {
                 string connectionString = _configuration.GetConnectionString(connectionStringName);
 
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new SqliteConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
-                    UserProfile user = await connection.QuerySingleOrDefaultAsync<UserProfile>("SELECT * FROM UserProfiles WHERE Email = @Email", new { Email = email });
+                    UserProfile user = await connection.QuerySingleOrDefaultAsync<UserProfile>("SELECT * FROM UserProfiles WHERE Email = '@Email'", new { Email = email });
 
                     if (user == null)
                     {

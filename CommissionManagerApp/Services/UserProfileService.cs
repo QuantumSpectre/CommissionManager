@@ -73,7 +73,7 @@ namespace CommissionManagerAPP.Services
         {
             try
             {
-                var user = await _userRepository.GetUserProfileByEmailAsync(email);
+                UserProfile user = await _userRepository.GetUserProfileByEmailAsync(email);
 
                 if (user != null)
                 {

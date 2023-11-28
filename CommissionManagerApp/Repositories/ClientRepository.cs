@@ -2,6 +2,7 @@
 using CommissionManagerAPP.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
+using Microsoft.Data.Sqlite;
 
 namespace CommissionManagerAPP.Repositories
 {
@@ -24,7 +25,7 @@ namespace CommissionManagerAPP.Repositories
 
                 List<Client> clients = new List<Client>();
 
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new SqliteConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
@@ -52,7 +53,7 @@ namespace CommissionManagerAPP.Repositories
 
                 string connectionString = _configuration.GetConnectionString("DefaultConnection");
 
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new SqliteConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
@@ -88,7 +89,7 @@ namespace CommissionManagerAPP.Repositories
 
                 string connectionString = _configuration.GetConnectionString("DefaultConnection");
 
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new SqliteConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
@@ -115,7 +116,7 @@ namespace CommissionManagerAPP.Repositories
             {
                 string connectionString = _configuration.GetConnectionString("DefaultConnection");
 
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new SqliteConnection(connectionString))
                 {
                     await connection.OpenAsync();
 
@@ -158,7 +159,7 @@ namespace CommissionManagerAPP.Repositories
             {
                 string connectionString = _configuration.GetConnectionString("DefaultConnection");
 
-                using (var connection = new SqlConnection(connectionString))
+                using (var connection = new SqliteConnection(connectionString))
                 {
                     await connection.OpenAsync();
 

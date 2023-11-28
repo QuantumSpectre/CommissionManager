@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj": {}
+    "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj": {
+    "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj",
+        "projectUniqueName": "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj",
         "projectName": "CommissionManager.GUI",
-        "projectPath": "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj",
+        "projectPath": "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj",
         "packagesPath": "C:\\Users\\charl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager\\CommissionManager.GUI\\obj\\",
+        "outputPath": "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager.GUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

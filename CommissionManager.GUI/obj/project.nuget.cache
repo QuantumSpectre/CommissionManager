@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h57qR8jaRi/GFMVAch+8Ykcu8AJ7dDjoxDYuKXbsR5U7T35AJC2p36RjptWtqCjUA4zJG+EBaeVErfoPPkjyeQ==",
+  "dgSpecHash": "M5Gnjv6cTRzPXza7wuOntS0B/nbM3H3DSMxNOCEbqG3INLHVlrH6atcja7c4u8J1Ehd23UGf3c1XZvbU2C0MNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj",
+  "projectFilePath": "C:\\Users\\charl\\source\\repos\\CommissionmanagerAPPlication\\CommissionManager\\CommissionManager.GUI\\CommissionManager.GUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\charl\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",
     "C:\\Users\\charl\\.nuget\\packages\\microsoft.data.sqlite\\8.0.0\\microsoft.data.sqlite.8.0.0.nupkg.sha512",
