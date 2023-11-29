@@ -138,12 +138,13 @@ namespace CommissionManagerApp
 
             // Generate a new GUID for the user profile
             Guid userProfileId = Guid.NewGuid();
+            string Securepassword = BCrypt.Net.BCrypt.HashPassword("SecurePassword");
 
             connection.Execute(@"
         INSERT INTO UserProfiles (Id, Username, Email, CreatedDate, Password)
         VALUES
-            (@Id, 'ExampleUser', 'example@email.com', '2023-11-27', 'securepassword')
-    ", new { Id = userProfileId });
+            (@Id, 'ExampleUser', 'example@email.com', '2023-11-27', @securepassword)
+    ", new { Id = userProfileId , securepassword = Securepassword });
         }
 
         private static bool TableExists(SqliteConnection connection, string tableName)

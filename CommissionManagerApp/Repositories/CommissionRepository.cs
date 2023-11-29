@@ -140,8 +140,8 @@ namespace CommissionManagerAPP.Repositories
                         commission.ClientId,
                         commission.CommissionedDate,
                         commission.Deadline,
-                        commission.status,
-                        commission.email
+                        commission.Status,
+                        commission.Email
                     });
 
                     await connection.CloseAsync();
@@ -180,7 +180,7 @@ namespace CommissionManagerAPP.Repositories
                         ClientId = @ClientId,
                         CommissionedDate = @CommissionedDate,
                         Deadline = @Deadline,
-                        Status = @Status
+                        status = @Status
                     WHERE Id = @Id;
                 ";
 
@@ -247,7 +247,7 @@ namespace CommissionManagerAPP.Repositories
                 Commission existingCommission = GetCommissionByIdAsync(commissionId).Result;
 
                 //Check if the existing commission's email matches the user's email
-                return existingCommission != null && existingCommission.email == userEmail;
+                return existingCommission != null && existingCommission.Email == userEmail;
             }
             catch (Exception ex)
             {
@@ -260,16 +260,17 @@ namespace CommissionManagerAPP.Repositories
         {
             try
             {
-                string sql = "SELECT TOP 4 * " +
-                             "FROM Commissions " +
-                             "WHERE email = @Email " +
-                             "ORDER BY " +
-                             "CASE " +
-                             "WHEN status = 'Completed' THEN 0 " +
-                             "WHEN status = 'Queued' THEN 1 " +
-                             "WHEN status = 'In Progress' THEN 2 " +
-                             "ELSE 3 " +
-                             "END, CommissionedDate DESC";
+                string sql = "SELECT * " +
+              "FROM Commissions " +
+              "WHERE Email = @Email " +
+              "ORDER BY " +
+              "CASE " +
+              "WHEN Status = 'Completed' THEN 0 " +
+              "WHEN Status = 'Queued' THEN 1 " +
+              "WHEN Status = 'In Progress' THEN 2 " +
+              "ELSE 3 " +
+              "END, CommissionedDate DESC " +
+              "LIMIT 4;";
 
                 string connectionString = _configuration.GetConnectionString("DefaultConnection");
 

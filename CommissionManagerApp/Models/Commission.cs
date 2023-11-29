@@ -10,11 +10,11 @@ namespace CommissionManagerAPP.Models
         public string? Description { get; set; }
         public Guid Id { get; set; }
         public Guid ClientId { get; set; }
-        public String status { get; set; }
+        public String Status { get; set; }
 
         //regex for email format
         [RegularExpression(@"^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$", ErrorMessage = "Invalid email format.")]
-        public string? email { get; set; }
+        public string? Email { get; set; }
 
         public Commission()
         {

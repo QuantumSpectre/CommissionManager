@@ -32,8 +32,8 @@ namespace CommissionManagerAPP.Services
                     Deadline = c.Deadline,
                     Description = c.Description,
                     ClientId = c.ClientId,
-                    status = c.status,
-                    email = c.email
+                    Status = c.Status,
+                    Email = c.Email
                     // Add more properties as needed
                 }).ToList();
 

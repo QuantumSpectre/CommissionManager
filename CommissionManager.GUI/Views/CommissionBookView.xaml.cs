@@ -19,10 +19,18 @@ namespace CommissionManager.GUI.Views
 
         public async Task<List<Commission>> GetCommissionsFromDatabase()
         {
+            httpClientService = mainWindow._httpClientService;
+
             List<Commission> commissionList = new List<Commission>();
 
             try
             {
+                mainWindow.Profile = new UserProfile()
+                {
+
+
+                };
+
                 var httpResult = await httpClientService.GetAsync(ApiEndpoints.Commissions + "/Byemail/" + mainWindow.Profile.Email);
 
                 if (httpResult.IsSuccessStatusCode)
