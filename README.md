@@ -2,31 +2,31 @@ Project: CommissionManager
 
 Overview
 
-WARNING - Currently in the minimum viable product stage!
+The Commission Manager is a small application for managing your commissions as an artist. 
+Currently the application allows you to create commissions, edit them and delete them.
+Each commission tracks its created date and its own deadline. They also feature a description box for short explanations of their contents.
+In technical terms this is an ASP.NET CRUD API running locally with a WPF GUI application for users to interact.
+Over all the project follows MVC architecture pattern as users interact through views that use controllers and models to update data within those views.
+Currently there are a number of features planned for this project in future updates.
 
-  CommissionManager is a comprehensive GUI-based WPF application designed to streamline the workflow of artists, empowering them to seamlessly manage commissions, maintain a client       database, and provide transparent information to their patrons. Currently in its early stages of development, CommissionManager aspires to become an indispensable tool for artists.
+Feature list Implementation
 
-Motivation
+1. Implement a regex expression - Inside the UserProfile model of the API there’s an email field in which I use a regex expression to ensure the emails stays within your typical email format
 
-  The genesis of CommissionManager lies in the my own personal need as an artist seeking a centralized tool to manage their art career and focus on their creative endeavors.        
-  Recognizing the widespread need for such a tool among artists, the project was born with the aim of providing a comprehensive solution for artists of all levels.
+2. Create a dictionary or list - Within the CommissionsController and the GetCommissionByEmail method, I use a list to store the commissions returned by the commission repository. Within the called repository I also use a list numerous times to store these objects and then use them within the program.
 
-Planned Features
+3. Add comments to your code explaining how you are using at least 2 of the solid principles - There are several places where I list each of my uses of the principles including the commissionRepository, The AuthToken Class and the UserProfileController.
 
-  CommissionManager aims to provide a robust set of features to enhance artists' productivity and client satisfaction:
+4. Make your application an API - It is an API
 
-  Commission Queue: A dynamic commission queue, easily editable for clear visibility of upcoming and past projects.
+5. Make your application a CRUD API - It's my understanding that since I can Create, Retrieve, Update, and Delete objects from my database it is a crud API.
 
-  Client Database: A comprehensive client database to manage client information, including contact details, project history, and personalized notes.
+6. Make your application asynchronous - I have used async methods at every opportunity
 
-  Commission History: A detailed record of past commissions, providing a complete overview of each client interaction.
+7. Have 2 or more tables (entities) in your application that are related and have a function to return data from both entities.  In entity framework, this is equivalent to a join.
 
-  Commission Sheet: A customizable commission sheet to clearly outline pricing, terms, and conditions for potential clients.
+While I did not perform an explicit join I did query the UserProfiles table to return the users email and then later query   the commissions table using that same retrieved email and felt it was worthy of noting. I will gladly accept it if this       doesn’t meet the requirements. But I do feel it shows my understanding of the potential relationship between two objects      from   separate tables and how that can be leveraged.
 
-  Client-Facing Web Application: A dedicated web application for clients to conveniently access commission information, view the artist's queue, and stay informed about project progress.
+8. Query your database using a raw SQL query, not EF - I didn’t use EF core for queries and have several raw SQL queries that should meet this requirement.
 
-  Calendar View: A comprehensive calendar view for long-term planning and scheduling, ensuring timely project completion.
 
-Future Development
-
-  CommissionManager is an evolving project, constantly open to new features and enhancements I welcome suggestions to improve the program in the future.
