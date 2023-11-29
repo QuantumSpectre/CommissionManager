@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManagerApp\bin\Release\net8.0\publish\CommissionManager.API</_PublishTargetUrl>
+    <History>False|2023-11-29T20:43:22.1851157Z;True|2023-11-29T15:29:42.4222808-05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -25,12 +25,6 @@ namespace CommissionManager.GUI.Views
 
             try
             {
-                mainWindow.Profile = new UserProfile()
-                {
-
-
-                };
-
                 var httpResult = await httpClientService.GetAsync(ApiEndpoints.Commissions + "/Byemail/" + mainWindow.Profile.Email);
 
                 if (httpResult.IsSuccessStatusCode)
