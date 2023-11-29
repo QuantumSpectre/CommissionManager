@@ -60,7 +60,7 @@ namespace CommissionManagerAPP.Repositories
                 {
                     await connection.OpenAsync();
 
-                    UserProfile user = await connection.QuerySingleOrDefaultAsync<UserProfile>("SELECT * FROM UserProfiles WHERE Email = '@Email'", new { Email = email });
+                    UserProfile user = await connection.QuerySingleOrDefaultAsync<UserProfile>("SELECT * FROM UserProfiles WHERE Email = @Email", new { Email = email });
 
                     if (user == null)
                     {

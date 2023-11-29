@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CommissionManagerAPP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ada2a4d25dad27f8ace2ee1a90af9c1f361d487a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CommissionManagerAPP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CommissionManagerAPP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
