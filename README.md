@@ -29,4 +29,13 @@ While I did not perform an explicit join I did query the UserProfiles table to r
 
 8. Query your database using a raw SQL query, not EF - I didn’t use EF core for queries and have several raw SQL queries that should meet this requirement.
 
+INSTRUCTIONS
+
+1. Clone the repo to your computer
+2. Double click StartComManager.bat to run the applications
+3. Log in using the credentials "example@email.com" and "SecurePassword"
+4. Manage your commissions!
+
+Note. There is a system for registering as a new user and it does work on my end but it seems to be a bit finnicky at times. Feel free to try it out! 
+
 
