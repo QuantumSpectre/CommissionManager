@@ -1,8 +1,5 @@
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\bin\Debug\net8.0-windows7.0\CommissionManager.GUI.exe
-C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\bin\Debug\net8.0-windows7.0\CommissionManager.GUI.deps.json
-C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\bin\Debug\net8.0-windows7.0\CommissionManager.GUI.runtimeconfig.json
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\bin\Debug\net8.0-windows7.0\CommissionManager.GUI.dll
-C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\bin\Debug\net8.0-windows7.0\CommissionManager.GUI.pdb
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\bin\Debug\net8.0-windows7.0\System.Net.Http.Formatting.dll
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\bin\Debug\net8.0-windows7.0\Microsoft.Data.Sqlite.dll
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\bin\Debug\net8.0-windows7.0\Newtonsoft.Json.dll
@@ -65,5 +62,8 @@ C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\Commi
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net8.0-windows7.0\CommissionManager.GUI.dll
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net8.0-windows7.0\refint\CommissionManager.GUI.dll
 C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net8.0-windows7.0\CommissionManager.GUI.pdb
-C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net8.0-windows7.0\CommissionManager.GUI.genruntimeconfig.cache
-C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.GUI\obj\Debug\net8.0-windows7.0\ref\CommissionManager.GUI.dll
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.Gui\bin\Debug\net8.0-windows7.0\CommissionManager.GUI.deps.json
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.Gui\bin\Debug\net8.0-windows7.0\CommissionManager.GUI.runtimeconfig.json
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.Gui\bin\Debug\net8.0-windows7.0\CommissionManager.GUI.pdb
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.Gui\obj\Debug\net8.0-windows7.0\CommissionManager.GUI.genruntimeconfig.cache
+C:\Users\charl\source\repos\CommissionmanagerAPPlication\CommissionManager\CommissionManager.Gui\obj\Debug\net8.0-windows7.0\ref\CommissionManager.GUI.dll

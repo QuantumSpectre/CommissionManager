@@ -1,5 +1,0 @@
-@echo off
-
-start "" "%ROOT_FOLDER%\publishedProjects\CommissionManager.Gui\CommissionManager.GUI.exe"
-
-start "" "%ROOT_FOLDER%\publishedProjects\CommissionManager.API\CommissionManagerAPP.Exe"
