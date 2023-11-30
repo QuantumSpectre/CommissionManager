@@ -19,7 +19,7 @@ Feature list Implementation
 
 4. Make your application an API - It is an API
 
-5. Make your application a CRUD API - It's my understanding that since I can Create, Retrieve, Update, and Delete objects from my database it is a crud API.
+5. Make your application a CRUD API - It's my understanding that since I you can create, retrieve, update, and delete objects from my database it is a CRUD API.
 
 6. Make your application asynchronous - I have used async methods at every opportunity
 
@@ -36,6 +36,7 @@ INSTRUCTIONS
 3. Log in using the credentials "example@email.com" and "SecurePassword"
 4. Manage your commissions!
 
-Note. There is a system for registering as a new user and it does work on my end but it seems to be a bit finnicky at times. Feel free to try it out! 
+WARNING! There is a bug that occurs when registering a new user you cannot immediately create a commission or the application will crash. You must exit the application and log in first. This is being actively researched.
+
 
 
