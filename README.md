@@ -25,7 +25,7 @@ Feature list Implementation
 
 7. Have 2 or more tables (entities) in your application that are related and have a function to return data from both entities.  In entity framework, this is equivalent to a join.
 
-While I did not perform an explicit join I did query the UserProfiles table to return the users email and then later query   the commissions table using that same retrieved email and felt it was worthy of noting. I will gladly accept it if this       doesn’t meet the requirements. But I do feel it shows my understanding of the potential relationship between two objects      from   separate tables and how that can be leveraged.
+While I did not perform an explicit join I did query the UserProfiles table to return the users email and then later query the commissions table using that same retrieved email and felt it was worthy of noting. I will gladly accept it if this doesn’t meet the requirements. But I do feel it shows my understanding of the potential relationship between two objects from separate tables and how that can be leveraged.
 
 8. Query your database using a raw SQL query, not EF - I didn’t use EF core for queries and have several raw SQL queries that should meet this requirement.
 
@@ -33,8 +33,9 @@ INSTRUCTIONS
 
 1. Clone the repo to your computer
 2. Double click StartComManager.bat to run the applications
-3. Log in using the credentials "example@email.com" and "SecurePassword"
-4. Manage your commissions!
+3. This will open 3 windows, do not close them!
+4. Log into the GUI using the credentials "example@email.com" and "SecurePassword"
+5. Manage your commissions!
 
 WARNING! There is a bug that occurs when registering a new user you cannot immediately create a commission or the application will crash. You must exit the application and log in first. This is being actively researched.
 
