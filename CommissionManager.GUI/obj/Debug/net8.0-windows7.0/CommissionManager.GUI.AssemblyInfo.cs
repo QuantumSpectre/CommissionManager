@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CommissionManager.GUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc9843ef88c8cc10d1b05ceaae81460cf856b2d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5aa8b427f8fb8a52fe0b76b31b215ee45b53541c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CommissionManager.GUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CommissionManager.GUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

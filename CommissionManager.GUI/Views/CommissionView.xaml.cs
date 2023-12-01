@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Net;
+using System.Net.Http;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -114,23 +115,36 @@ namespace CommissionManager.GUI.Views
 
         private async void DeleteCommissionButton_Click(object sender, RoutedEventArgs e)
         {
-            bool deletionSuccessful = await httpClientService.DeleteAsync(ApiEndpoints.Commissions + "/" + ComID + "?email=" + mainWindow.Profile.Email);
+            HttpResponseMessage response = await httpClientService.GetAsync(ApiEndpoints.Commissions + "/" + ComID);
 
-            if (deletionSuccessful)
+            if (response.IsSuccessStatusCode)
             {
-                MessageBox.Show("Commission deleted successfully!");
+                bool deletionSuccessful = await httpClientService.DeleteAsync(ApiEndpoints.Commissions + "/" + ComID + "?email=" + mainWindow.Profile.Email);
 
-                CommissionView newCommissionView = new CommissionView();
+                if (deletionSuccessful)
+                {
+                    MessageBox.Show("Commission deleted successfully!");
 
-                DashboardView.Instance = new DashboardView();
+                    CommissionView newCommissionView = new CommissionView();
 
-                await DashboardView.Instance.Initialize(mainWindow.Profile, mainWindow.MainFrame);
-                
-                mainWindow.MainFrame.Navigate(newCommissionView);       
+                    DashboardView.Instance = new DashboardView();
+
+                    await DashboardView.Instance.Initialize(mainWindow.Profile, mainWindow.MainFrame);
+
+                    mainWindow.MainFrame.Navigate(newCommissionView);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete commission.");
+                }
+            }
+            else if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                MessageBox.Show("Commission not found. Cannot delete.");
             }
             else
             {
-                MessageBox.Show("Failed to delete commission.");
+                MessageBox.Show($"Error checking commission existence. Status code: {response.StatusCode}");
             }
         }
 

@@ -63,7 +63,7 @@ namespace CommissionManager.GUI.Views
 
                         mainWindow.AuthToken = new AuthToken(EmailTextBox.Text, true);
 
-                        mainFrame.Navigate(new DashboardView());
+                        mainFrame.Navigate(new SignInView());
                     }
                     else
                     {
