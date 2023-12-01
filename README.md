@@ -39,7 +39,7 @@ INSTRUCTIONS
 4. Log into the GUI using the credentials "example@email.com" and "SecurePassword"
 5. Manage your commissions!
 
-WARNING! There is a bug that occurs when registering a new user you cannot immediately create a commission or the application will crash. You must exit the application and log in first. This is being actively researched.
+WARNING! The Client ID section is intended for future features. Please leave the field empty or the application WILL crash. This will be adressed in in a future update.
 
 
 
