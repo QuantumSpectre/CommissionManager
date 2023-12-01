@@ -9,6 +9,8 @@ In technical terms this is an ASP.NET CRUD API running locally with a WPF GUI ap
 Over all the project follows MVC architecture pattern as users interact through views that use controllers and models to update data within those views.
 Currently there are a number of features planned for this project in future updates.
 
+Requirements: .NET Version 8.0
+
 Feature list Implementation
 
 1. Implement a regex expression - Inside the UserProfile model of the API there’s an email field in which I use a regex expression to ensure the emails stays within your typical email format
